@@ -30,7 +30,7 @@ int main()
 
     while(p!=NULL)
     {
-        cout<<p->data<<" -> "<<endl;
+        cout<<p->data<<" -> "<<flush;
         p=p->next;
     }
 return 0;
