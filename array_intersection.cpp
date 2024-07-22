@@ -3,20 +3,27 @@ using namespace std;
 
 void insert(int arr1[],int arr2[],int m,int n)
 {
+    int i=0,j=0;
     int ans;
-    for(int i=0;i<m;i++)
+    while(i<m && j<n)
     {
-        int ele=arr1[i];
-        for(int j=0;j<n;j++)
+        if(arr1[i]==arr2[j])
         {
-            if(ele==arr2[j])
-            {
-              ans=arr2[j];
-              arr2[j]=-111234;
-            }
+            ans=arr1[i];
+            arr1[i]=-111222;
+            i++;
+            j++;
+        }
+        else if(arr1[i]<arr2[j])
+        {
+            i++;
+        }
+         else 
+        {
+            j++;
         }
     }
-    cout<<"Intersected Element is="<<ans;
+    cout<<"Intersection="<<ans;
 }
 
 int main()
